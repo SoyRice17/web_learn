@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>div 박스 그림자</title>
+    <style>
+        ul {
+            font : normal 24px berdana;
+        }
+        #s1 {
+            text-shadow: 3px 3px;
+        }
+        #s2 {
+            text-shadow: 3px 3px red;
+        }
+        #s3 {
+            text-shadow: 3px 3px 5px skyblue;
+        }
+        #s4 {
+            color: yellow;
+            text-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        .redBox {
+            box-shadow: 10px 10px red;
+        }
+        .blurBox {
+            box-shadow: 10px 10px 5px skyblue;
+        }
+        .multiEffect {
+            box-shadow: 2px 2px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+        div {
+            width: 150px;
+            height: 70px;
+            padding: 10px;
+            border: 10px solid lightgray;
+            background-image : url(/media/스크린샷\ 2024-04-12\ 오전\ 10.49.46\ 복사본.png);
+            background-size : 150px 100px;
+            background-repeat : no-repeat;
+
+        }
+    </style>
+</head>
+<body>
+    <h3>그림자 만들기</h3>
+    <ul>
+        <li id="s1">Drop Shadow</li>
+        <li id="s2">Color Shadow</li>
+        <li id="s3">Blur Shadow</li>
+        <li id="s4">Multiple Shadow</li>
+    </ul>
+    <hr>
+    <div class="redBox">짜장면</div><br>
+    <div class="blurBox">짬뽕</div><br>
+    <div class="multiEffect">탕수육</div><br>
+</body>
+</html>
