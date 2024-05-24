@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>페이지 방문 초시간이  짝수이면 violet, 홀수이면 lightskyblue 배경</h3>
+
+    <hr>
+    <script>
+        let today = new Date();
+        let hours = today.getHours();
+        let minutes = today.getMinutes();
+        let seconds = today.getSeconds();
+        let bgcolor = (seconds % 2 == 0) ? "violet" : "lightskyblue";
+        document.body.style.backgroundColor = bgcolor;
+        document.write(`현재 시간 : ${hours}시 ${minutes}분 ${seconds}초`);
+    </script>
+</body>
+</html>

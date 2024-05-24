@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //별 찍기
+    function star(n) {
+        let m = parseInt(n);
+        for (let i = 1; i <= m; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+</script>
+<body>
+    <h3>별찍기</h3>
+    <hr>
+    <script>
+        let n = prompt("몇 줄을 출력할까요?", "");
+        star(n);
+    </script>
+</body>
+</html>
