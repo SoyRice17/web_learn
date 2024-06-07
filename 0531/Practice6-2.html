@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #star12 , #star34 , #star5{
+            float: left;
+            left: 10px;
+            margin: 10px;
+            padding: 5px;
+            border: 1px solid yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h3>별 문자 출력하기</h3>
+    <hr>
+    <div id="star12">
+        <script>
+            let num = prompt("숫자를 입력하세요", "");
+            //직각삼각형
+            let star1 = "";
+            for (let i = 1; i <= num; i++) {
+                star1 += "*";
+                document.write(star1+"<br>");
+            }
+            //역삼각형
+            document.write("<br>");
+            for (let i = num; i > 0; i--) {
+                let star2 = "";
+                for (let j = 0; j < i; j++) {
+                    star2 += "*";
+                }
+                document.write(star2+"<br>");
+            }
+        </script>
+    </div>
+    <div id="star34">
+        <script>
+            //오른쪽 정렬 역삼각형
+            for (let i = num; i > 0; i--) {
+                let star3 = "";
+                for (let j = 0; j < num-i; j++) {
+                    star3 += "&nbsp;";
+                }
+                for (let j = 0; j < i; j++) {
+                    star3 += "*";
+                }
+                document.write(star3+"<br>");
+            }
+            document.write("<br>");
+            //오른쪽 정렬 직각삼각형
+            for (let i = 1; i <= num; i++) {
+                let star4 = "";
+                for (let j = 0; j < num-i; j++) {
+                    star4 += "&nbsp;";
+                }
+                for (let j = 0; j < i; j++) {
+                    star4 += "*";
+                }
+                document.write(star4+"<br>");
+            }
+        </script>
+    </div>
+    <div id="star5">
+        <script>
+            //피라미드
+            for (let i = 1; i <= num; i++) {
+                let starnum = "";
+                for (let j = 0; j < num-i; j++) {
+                    starnum += "&nbsp;";
+                }
+                for (let j = 0; j < 2*i-1; j++) {
+                    starnum += "*";
+                }
+                document.write(starnum+"<br>");
+            }
+        </script>
+    </div>
+</body>
+</html>

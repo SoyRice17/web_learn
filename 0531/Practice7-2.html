@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중복데이터 제거</title>
+    <style>
+        body {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        let str = ['apple' , 'banana', 'orange', 'apple', 'orange', 'apple', 'banana', 'apple'];
+        let count = 0;
+        let arr = [];
+        for (let i = 0; i < str.length; i++) {
+            check = false;
+            for (let j = 0; j < arr.length; j++) {
+                if (str[i] == arr[j]) {
+                    check = true;
+                    break;
+                }
+            }
+            if (check == false) {
+                arr[count] = str[i];
+                count++;
+            }
+        }
+        document.write("과일 매열"+ arr.join(", ") + "<br>");
+        document.write("중복되지 않은 과일의 개수 : " + arr.length)
+    </script>
+</body>
+</html>
